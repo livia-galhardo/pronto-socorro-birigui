@@ -3,24 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Meu Primeiro Site</title>
+    <title>Cadastro de Pacientes - Hospital</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
-      <h1>Bem-vindo ao meu site!</h1>
-      <p>Feito com carinho e GitHub Pages 💻💖</p>
-    </header>
+    <h1>Cadastro de Pacientes</h1>
 
-    <main>
-      <section>
-        <h2>Sobre mim</h2>
-        <p>Esse é meu primeiro projeto publicado na internet!</p>
-      </section>
-    </main>
+    <form id="cadastroForm">
+      <label for="nome">Nome do paciente:</label>
+      <input type="text" id="nome" name="nome" required />
 
-    <footer>
-      <p>&copy; 2025 • Feito por Mim :)</p>
-    </footer>
+      <label for="idade">Idade:</label>
+      <input type="number" id="idade" name="idade" required />
+
+      <label for="sintomas">Sintomas:</label>
+      <textarea id="sintomas" name="sintomas" required></textarea>
+
+      <label for="gravidade">Classificação de Gravidade:</label>
+      <select id="gravidade" name="gravidade" required>
+        <option value="">Selecione...</option>
+        <option value="azul">Azul (sem urgência)</option>
+        <option value="verde">Verde (pouco urgente)</option>
+        <option value="amarelo">Amarelo (urgente)</option>
+        <option value="laranja">Laranja (muito urgente)</option>
+        <option value="vermelho">Vermelho (emergência)</option>
+      </select>
+
+      <button type="submit">Cadastrar</button>
+    </form>
+
+    <script src="script.js"></script>
   </body>
 </html>
